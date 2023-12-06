@@ -25,17 +25,23 @@ public class MoneyTest {
 
 	@Test
 	public void testGetAmount() {
-		fail("Write test case here");
+		assertEquals((Integer) 10000, SEK100.getAmount());
+		assertEquals((Integer) 1000, EUR10.getAmount());
+		assertEquals((Integer) 20000, SEK200.getAmount());
+		assertEquals((Integer) 2000, EUR20.getAmount());
 	}
 
 	@Test
 	public void testGetCurrency() {
-		fail("Write test case here");
+		assertEquals(SEK, SEK100.getCurrency());
+		assertEquals(EUR, EUR10.getCurrency());
+		assertEquals(SEK, SEK200.getCurrency());
+		assertEquals(EUR, EUR20.getCurrency());
 	}
 
 	@Test
 	public void testToString() {
-		fail("Write test case here");
+		assertEquals("1000 EUR", EUR10.toString());
 	}
 
 	@Test
